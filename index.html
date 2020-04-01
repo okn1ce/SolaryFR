@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- CSS & Scripts -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <script src="game.js"></script>
+    <title>Solary</title>
+  </head>
+
+
+
+  <body>
+  <div class="console" id="console">
+  	<p class="IntroText"></p> 
+</div>
+  </div>
+  <div id="HUD" style="visibility: hidden;">
+    <div style="display: block;" class="ui inverted small statistic">
+  <div class="value">
+    <span id="powerCount">0</span>
+  </div>
+  <div class="label">
+    Energy
+  </div>
+  <br />
+</div>
+    <h1 style="display: inline;" id="Title" class="Title"></h1><div style="display: inline;" id="Input" class="ui transparent input">
+  <input id="vaisseauInput" style="color: white;" type="text" placeholder="Nommez votre vaisseau" value=""><button id="vaisseauButton" onclick="vname();">Choisir</button>
+</div>
+
+<!-- Buttons -->
+<br />
+<div class="ui labeled button" tabindex="0" style="margin: 1%;">
+  <div class="ui green button" onclick="sell();">
+    <i class="money bill alternate outline icon"></i> Vendre le stock d'énergie
+  </div>
+  <a class="ui basic red left pointing label">
+    <span id="moneyCount">0</span>
+  </a>
+</div> <br />
+
+    <!-- Advancements -->
+    <section class="upgrades" id="adv1">
+        <div class="ui cards">
+            <div class="card" style="text-align: center; background-color: white;">
+                <div class="content">
+                    <i style="margin-bottom: 5%;" class="question circle icon"></i>
+                    <div class="header">
+                        Module disponible.
+                    </div>
+                    <div class="meta">
+                        Il est temps d'se faire de l'argent.
+                    </div>
+                    <div class="description">
+                        Les panneaux solaires sont très efficaces pour récolter de l'énergie, mais ils se cassent rapidement.
+                        <br />
+                        <hr /> Les panneaux thermiques sont bien moins efficaces, mais au moins eux, ils cassent pas.
+                    </div>
+                </div>
+                <div class="extra content">
+                    <div class="ui two buttons">
+                        <button onclick="advSolarPanel();" class="ui basic green button">Solaire T1</button>
+                        <button onclick="advThermalPanel();" class="ui basic green button">Thermique T1</button>
+                    </div>
+                </div>
+            </div>
+    </section>
+ 
+<br />
+  <a href="map/map.html" class="ui inverted pink button" style="margin: 1%">Carte</a>
+<p class="consoleText"></p>
+
+<div class="Informations">
+        <p> <strong>[EBLM J0555-57Ab]</strong>
+            <br /> Solar mass : <span id="starEnergy">840000</span>
+            <br /> Temperature : 6451K
+
+        </p>
+
+    </div>
+
+
+ </div>
+  </body>
+</html>
+<!-- Scripts --> 
+
+<script src="https://cdn.jsdelivr.net/npm/typeit@7.X.X/dist/typeit.min.js"></script>
+<script src="console.js"></script>
+    
+
